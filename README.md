@@ -44,20 +44,21 @@ Results stored in eval_results.json
 
 chat_x/
 │
-├── main.py                      # FastAPI application
-├── agent.py                     # RAG + Code generation logic
-├── models.py                    # Database models (SQLite)
-├── init_db.py                   # Initialize database
+├── main.py                      # FastAPI application (API endpoints + routing)
+├── agent.py                     # RAG pipeline + code generation logic
+├── models.py                    # Database models (SQLAlchemy + SQLite)
+├── init_db.py                   # Database initialization script
 │
-├── run_evaluation.py            # Automated evaluation script
+├── run_evaluation.py            # Automated evaluation script (pass@k, unit tests)
 │
-├── tests/                       # Evaluation dataset
+├── tests/                       # Evaluation dataset & unit tests
 │   ├── eval_prompts.jsonl       # Prompts + test script mapping
 │   ├── test_add.py              # Unit tests for add()
 │   ├── test_reverse.py          # Unit tests for reverse_string()
 │   └── test_max.py              # Unit tests for find_max()
 │
-└── generated_code.py (created during evaluation)
+└── generated_code.py            # Auto-generated file during evaluation
+
 
 # Start the server:
 uvicorn main:app --reload

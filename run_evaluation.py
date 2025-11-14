@@ -1,4 +1,4 @@
-# eval/run_evaluation.py
+# run_evaluation.py
 import json, os, time, subprocess, requests, shutil, tempfile
 from pathlib import Path
 from typing import List

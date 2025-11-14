@@ -96,8 +96,8 @@ def ask_question(query: str):
     except Exception as e:
         # Catch any LLM or vectorstore errors
         return f"Error: {str(e)}"
+        
 ###############
-# ------------------ add this to the end of agent.py ------------------
 from typing import Dict
 
 def generate_code_from_prompt(user_task: str, language: str = "python", run_tests: bool = False) -> Dict:

@@ -3,23 +3,23 @@
 This project implements a Retrieval-Augmented Code Generation pipeline using FastAPI, FAISS, HuggingFace embeddings, and a pluggable code-generation module.
 It supports:
 
-Document ingestion
-Vectorstore indexing
-Question answering
-Code generation (/generate_code endpoint)
-Automated evaluation with pass@k metrics
+-Document ingestion
+-Vectorstore indexing
+-Question answering
+-Code generation (/generate_code endpoint)
+-Automated evaluation with pass@k metrics
 
 # Features
 
 ##Retrieval-Augmented Generation (RAG)
 
-Documents can be uploaded via /upload
-Text is embedded using all-MiniLM-L6-v2
-Stored & retrieved using FAISS
+-Documents can be uploaded via /upload
+-Text is embedded using all-MiniLM-L6-v2
+-Stored & retrieved using FAISS
 
 ## Code Generation API
 
-/generate_code endpoint generates Python code based on task description
+-/generate_code endpoint generates Python code based on task description
 Easy to switch between fallback generator and LLM-based generator
 
 ## API Server (FastAPI)
@@ -27,15 +27,15 @@ Easy to switch between fallback generator and LLM-based generator
 -Interactive UI available at:
  http://127.0.0.1:8000/docs
 
-- Automated Evaluation Framework
-Evaluates the generator across multiple tasks
-Executes generated code against unit tests
+**Automated Evaluation Framework**
+-Evaluates the generator across multiple tasks
+-Executes generated code against unit tests
 
 Computes:
-pass_ratio
-pass@1
-pass@3
-pass@5
+-pass_ratio
+-pass@1
+-pass@3
+-pass@5
 
 latency stats
 Results stored in eval_results.json
@@ -69,15 +69,15 @@ http://127.0.0.1:8000/docs
 # How to Run Evaluation
 python run_evaluation.py
             |
-Calls /generate_code
-Saves generated code as generated_code.py
-Runs the corresponding unit tests
-Computes pass@k metrics
-Saves everything in eval_results.json
+-Calls /generate_code
+-Saves generated code as generated_code.py
+-Runs the corresponding unit tests
+-Computes pass@k metrics
+-Saves everything in eval_results.json
 
 # Evaluation Results
-pass_ratio: 1.0
-pass@1: 3/3 = 1.000
-pass@3: 3/3 = 1.000
-pass@5: 3/3 = 1.000
-Mean pass_ratio@n: 1.0
+-pass_ratio: 1.0
+-pass@1: 3/3 = 1.000
+-pass@3: 3/3 = 1.000
+-pass@5: 3/3 = 1.000
+-Mean pass_ratio@n: 1.0

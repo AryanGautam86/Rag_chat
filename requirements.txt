@@ -1,0 +1,16 @@
+uvicorn[standard]== 0.32.0       # ASGI server
+pydantic==2.9.2                  # Data validation (FastAPI dependency)
+langchain== 1.0.0                # LangChain Classic
+langchain-openai==1.0.0          # OpenAI integration
+langchain-community==0.4         # FAISS integration
+langchain-huggingface==1.0.0 
+openai==2.5.0                    # OpenAI API client
+sentence-transformers==3.2.1     # For HuggingFace embeddings
+faiss-cpu==1.8.0.post1           # FAISS vector store
+transformers==4.57.1             # Transformers library required by embeddings
+huggingface-hub==0.35.3          # Manage models & datasets from HuggingFace Hub
+numpy==1.26.4                    # Core numerical library required by PyTorch, FAISS, and transformers
+python-dotenv==1.1.1             # Optional: load .env files for API keys
+torch==2.9.0
+python-multipart==0.0.20
+fastapi==0.115.0

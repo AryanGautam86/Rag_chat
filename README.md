@@ -58,7 +58,7 @@ chat_x/
 │   └── test_max.py              # Unit tests for find_max()
 │
 └── generated_code.py            # Auto-generated file during evaluation
-
+```
 
 # Start the server:
 uvicorn main:app --reload

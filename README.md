@@ -41,7 +41,7 @@ latency stats
 Results stored in eval_results.json
 
 # Project Structure
-
+```text
 chat_x/
 │
 ├── main.py                      # FastAPI application (API endpoints + routing)
